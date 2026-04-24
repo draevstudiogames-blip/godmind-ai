@@ -17,7 +17,34 @@ interface Message {
   lyrics?: string;
 }
 
-const ai = new GoogleGenAI({ apiKey: "AIzaSyDH3DNFCVXz_9SFQ6IlOYBqHxbacw9VpJ8" });
+import { GoogleGenAI } from "@google/genai";
+
+export async function POST(req: Request) {
+  try {
+    const body = await req.json();
+    const { message } = body;
+
+    const ai = new GoogleGenAI({
+      apiKey: process.env.GEMINI_API_KEY!,
+    });
+
+    const response = await ai.models.generateContent({
+      model: "gemini-3.1-pro-preview",
+      contents: message,
+    });
+
+    return Response.json({
+      text: response.text,
+    });
+
+  } catch (error) {
+    console.error("API ERROR:", error);
+    return Response.json(
+      { error: "Terjadi error di server" },
+      { status: 500 }
+    );
+  }
+}
 
 const generateId = () => Math.random().toString(36).substring(2, 9);
 
