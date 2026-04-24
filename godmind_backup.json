@@ -1,0 +1,33 @@
+[
+  {
+    "id": "5todrou",
+    "title": "Selamat malam",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Selamat malam"
+      },
+      {
+        "role": "assistant",
+        "content": "Selamat malam! Ada yang bisa saya bantu malam ini?"
+      },
+      {
+        "role": "user",
+        "content": "Mantap"
+      },
+      {
+        "role": "assistant",
+        "content": "Terima kasih atas apresiasinya! Ada yang bisa saya bantu atau jelaskan lebih lanjut hari ini?"
+      },
+      {
+        "role": "user",
+        "content": "Bisa cari berita?"
+      },
+      {
+        "role": "assistant",
+        "content": "Tentu saja bisa dong! Aku selalu siap bantu kamu mencari berita terbaru kapan pun kamu butuh. \n\nMau cari berita yang serius, perkembangan teknologi terkini, kejadian viral, atau sekadar gosip selebriti paling hangat hari ini? Bebas! Anggap saja aku asisten sekaligus teman ngobrolmu yang selalu sedia informasi.\n\nKamu lagi pengen baca berita tentang apa nih sekarang? Kasih tahu aja, nanti langsung aku carikan spesial buat kamu!"
+      }
+    ],
+    "updatedAt": 1777038751682
+  }
+]
