@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-primary-start: #9333ea;
+  --color-primary-end: #facc15;
+  --color-bg-start: #dbeafe;
+  --color-bg-mid: #fdf2f8;
+  --color-bg-end: #fae8ff;
+  --font-jakarta: var(--font-jakarta);
+}
+
+:root {
+  --font-sans: var(--font-jakarta), "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, inherit;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: linear-gradient(135deg, var(--color-bg-start) 0%, var(--color-bg-mid) 50%, var(--color-bg-end) 100%);
+  min-height: 100vh;
+  color: #1f2937;
+  overflow-x: hidden;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
+
+.logo-gradient {
+  background: linear-gradient(135deg, #9333ea 0%, #facc15 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo-gradient-bg {
+  background: linear-gradient(135deg, #9333ea 0%, #facc15 100%);
+}
+
+.glow-white {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+.text-shadow-sm {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.4s ease-out forwards;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
