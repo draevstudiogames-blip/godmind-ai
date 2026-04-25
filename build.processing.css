@@ -1,0 +1,11 @@
+/* Build Processing Styles */
+.build-container {
+  padding: 2rem;
+  background: #f4f4f5;
+  border-radius: 1rem;
+}
+
+.processing-status {
+  color: #2563eb;
+  font-weight: 600;
+}
